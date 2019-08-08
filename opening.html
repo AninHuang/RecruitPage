@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>opening</title>
+  </head>
+  <body>
+    <input id="MailInfo" type="hidden" value="" />
+    <section class="pwc-opening flex flex-wrap items-center my-5">
+      <span id="JobTitle" class="pwc-opening_title flex items-start font-bold"></span>
+      <span id="btn-back" class="ml-auto">
+        <button id="btn-backlast" onclick="backToLast();">返回前一頁</button>
+      </span>
+      <section class="w-full pwc-opening_info mb-4 flex flex-wrap items-center">
+        <div id="pwc-opening_area"></div>
+        <div id="pwc-opening_industry"></div>
+        <div id="pwc-opening_code"></div>
+      </section>
+      <section class="w-full pwc-opening_content noshow">
+        <div class="flex flex-wrap items-center">
+          <div class="pwc-opening_requirements mr-4">Requirements</div>
+          <a href="#" id="btn-apply">應徵此職位</a>
+        </div>
+        <hr/>
+        <p>職務說明</p><br />
+        <div id="JobRequirements"></div>
+      </section>
+      <!-- 載入動畫 -->
+      <section class="my-0 mx-auto">
+        <div id="pwc-loading">
+            <p>畫面載入中，請稍等</p>
+            <div class="dot-flashing my-4 mx-auto"></div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

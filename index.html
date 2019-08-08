@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>PandO recruit page</title>
+      <link rel="stylesheet" href="Content/pwc-main.css" />
+      <link rel="stylesheet" href="Content/tailwind.min.css" />
+      <link rel="stylesheet" href="Content/pwc-pagination.css" />
+      <script src="Scripts/jquery-3.3.1.min.js"></script>
+      <script src="Scripts/TweenMax.min.js"></script>
+      <script src="Scripts/jquery.ellipsis.js"></script>
+      <script src="Scripts/masonry.pkgd.min.js"></script>
+      <script src="Scripts/pagination.js"></script>
+      <script src="Scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <!--上方選單區塊-->
+      <div class="pwc-tabs">
+        <!--「職缺分類、依地區別」選單-->
+        <div class="pwc-tabs-block flex">
+          <div data-tab="1" class="pwc-tab w-1/2 active">職缺分類
+              <svg>
+                <image xlink:href="img/chevron.svg" src="img/chevron.jpg" width="16" height="16" />
+              </svg>
+          </div>
+          <div data-tab="2" class="pwc-tab w-1/2">依地區別
+              <svg>
+                <image xlink:href="img/chevron.svg" src="img/chevron.jpg" width="16" height="16" />
+              </svg>
+          </div>
+        </div>
+        <!--「職缺分類、依地區別」選單內各項目-->
+        <div class="pwc-tabs-content flex">
+          <div class="pwc-indicator w-1/2"></div>
+          <div id="JobTypeList" class="pwc-tablist pwc-tablist_1 flex flex-wrap w-full h-full">
+            <Section class="p-4">
+              <a id="JobType_1" href="#">經營管理 Business Management</a>
+              <a id="JobType_2" href="#">人力資源 Human Resources</a>
+              <a id="JobType_3" href="#">財務會計稅務 Finance / Accounting / Tax</a>
+              <a id="JobType_4" href="#">法務智財 Legal</a>
+              <a id="JobType_5" href="#">業務 Sales</a>
+              <a id="JobType_8" href="#">專案管理 PM</a>
+            </Section>
+            <Section class="p-4">
+              <a id="JobType_6" href="#">行銷公關 Marketing / PR</a>
+              <a id="JobType_7" href="#">研發 RD / SW / HW / ME / EE</a>
+              <a id="JobType_9" href="#">供應鏈 Logistic / Procurement / Warehouse</a>
+              <a id="JobType_10" href="#">生產製造品管 Production / Manufacturing / QA/QC / PE / IE</a>
+              <a id="JobType_11" href="#">資訊 IT / MIS</a>
+              <a id="JobType_12" href="#">客服行政 Customer Service / General Affairs</a>
+            </Section>
+            <Section class="p-4">
+              <a id="JobType_13" href="#">醫療生技專才 Pharmaceutical / Bio-tech</a>
+              <a id="JobType_14" href="#">金融保險專才 Banking / Insurance</a>
+              <a id="JobType_15" href="#">電子商務專才 E-commerce / Internet</a>
+              <a id="JobType_16" href="#">其他 Others</a>
+            </Section>
+          </div>
+          <div id="LocationList" class="pwc-tablist pwc-tablist_2 flex flex-wrap w-full h-full noshow">
+            <Section class="p-4">
+              <a id="Location_1" href="#">大台北地區</a>            
+              <a id="Location_2" href="#">台灣北部 (桃園 / 新竹 / 苗栗)</a>            
+              <a id="Location_3" href="#">台灣中部 (台中 / 彰化 / 南投 / 雲林)</a>            
+              <a id="Location_4" href="#">台灣南部 (嘉義 / 台南 / 高雄)</a>            
+          </Section>
+          <Section class="p-4">
+              <a id="Location_5" href="#">華東區 (山東 / 江蘇 / 安徽 / 浙江 / 江西 / 福建 / 上海 )</a>            
+              <a id="Location_6" href="#">華北區 (北京 / 天津 / 河北 / 山西 )</a>            
+              <a id="Location_7" href="#">華中區 (河南 / 湖北 / 湖南)</a>            
+              <a id="Location_8" href="#">華南區 (福建 / 廣東 / 廣西 / 貴州 / 雲南 / 四川 )</a>            
+          </Section>
+          <Section class="p-4">
+              <a id="Location_9" href="#">日本</a>            
+              <a id="Location_10" href="#">新加坡</a>            
+              <a id="Location_11" href="#">東南亞及印度</a>            
+              <a id="Location_12" href="#">歐美</a>            
+              <a id="Location_13" href="#">其他</a>            
+          </Section>
+          </div>
+        </div>
+      </div>
+      <div id="pwc-context-section">
+        <!--職位敘述-->
+        <div class="pwc-cards-description flex flex-wrap justify-between items-center my-4">
+          <div class="pwc-headline">最新職位</div>
+          <div id="LastDateTime" style="font-size:0.95rem;"></div>
+        </div>
+        <!--換頁元件-->
+        <div id="pagination-container" class="w-full"></div>
+        <!--多則職缺資訊-->
+        <div id="data-container" class="pwc-cards-block">
+            <!-- 載入動畫 -->
+            <div id="pwc-loading">
+                <p>畫面載入中，請稍等</p>
+                <div class="dot-flashing"></div>
+            </div>
+        </div>
+      </div>
+      <!-- 職缺內文 -->
+      <div id="opening-container"></div>
+    </div>
+  </body>
+</html>
